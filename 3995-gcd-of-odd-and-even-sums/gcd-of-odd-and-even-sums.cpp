@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int solve(int even_sum, int odd_sum){
+    /*int solve(int even_sum, int odd_sum){
         vector<int>v; vector<int>vc;
         for(int i=1; i<=even_sum; i++){
             if(even_sum%i==0){
@@ -42,16 +42,27 @@ public:
             fact = max(fact, s[k]);
         }
         return fact;
-    }
+    }*/
     int gcdOfOddEvenSums(int n) {
-        if(n==1)
+       /* if(n==1)
             return 1;
-            
+
         int even_sum=0, odd_sum=0;
         for(int i=0; i<n;i++){
             even_sum +=2*i+2;
             odd_sum +=2*i+1;
         }
-        return solve(even_sum, odd_sum);
+        return solve(even_sum, odd_sum);*/
+
+        // now optimize and mathematical observation.........
+
+        /*sumOdd = n²
+        sumEven = n(n+1)
+        and gcd(n²,n(n+1)) = n*(gcd(n, (n+1))).... and 
+        gcd(n, n+1) = 1 always so....
+        n*1=n....since......*/
+
+        return n;
+
     }
 };
